@@ -113,7 +113,7 @@ nav {
   margin-top: 2.5rem;
 }
 
-.intro button {
+.intro a {
   background: #F99C1C;
   font-family: Arial, sans-serif;
   font-weight: 700;
@@ -122,7 +122,6 @@ nav {
   padding: 1rem 0.5rem;
   width: 412px;
   color: #fff;
-  border: none;
   cursor: pointer;
   margin: 45px auto;
   text-align: center;
@@ -134,7 +133,7 @@ nav {
   -o-border-radius: 12px;
 }
 
-.intro button:hover{
+.intro a:hover{
   background: #ee9314;
 }
 
@@ -224,6 +223,11 @@ nav {
 
 /* Iphone */
 @media (max-width: 768px) {
+
+  .header{
+    width: 100%;
+  }
+
   .cambiando-contigo {
     width: 90%;
     padding: 0.7rem;
@@ -245,7 +249,7 @@ nav {
     margin-top: 1.5rem;
   }
 
-  .intro button {
+  .intro a {
     font-size: 18px;
     line-height: 21px;
     padding: 1rem 0.5rem;
@@ -324,7 +328,7 @@ nav {
     margin-top: 1.5rem;
   }
 
-  .intro button {
+  .intro a {
     font-size: 16px;
     line-height: 21px;
     padding: 1rem 0.3rem;
