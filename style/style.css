@@ -1,52 +1,344 @@
-/*
-  1. Use a more-intuitive box-sizing model.
-*/
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
-/*
-  2. Remove default margin
-*/
+
 * {
   margin: 0;
+  padding: 0;
 }
-/*
-  3. Allow percentage-based heights in the application
-*/
-html, body {
+
+html,
+body {
   height: 100%;
 }
-/*
-  Typographic tweaks!
-  4. Add accessible line-height
-  5. Improve text rendering
-*/
+
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
-/*
-  6. Improve media defaults
-*/
-img, picture, video, canvas, svg {
+
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
-/*
-  7. Remove built-in form typography styles
-*/
-input, button, textarea, select {
+
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
-/*
-  8. Avoid text overflows
-*/
-p, h1, h2, h3, h4, h5, h6 {
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
-/*
-  9. Create a root stacking context
-*/
-#root, #__next {
+
+#root,
+#__next {
   isolation: isolate;
+}
+
+.content {
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+  height: 792px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(../img/header.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 0px 0px 20px 20px;
+  -webkit-border-radius: 0px 0px 20px 20px;
+  -moz-border-radius: 0px 0px 20px 20px;
+  -ms-border-radius: 0px 0px 20px 20px;
+  -o-border-radius: 0px 0px 20px 20px;
+}
+
+nav {
+  width: 95%;
+  background: #14307D;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  margin-top: 40px;
+}
+
+.cambiando-contigo {
+  margin-left: 0.7rem;
+}
+
+.intro {
+  margin: 180px auto 0;
+  width: 950px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 59px;
+  text-align: center;
+  color: #fff;
+}
+
+.intro h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 52px;
+  line-height: 61px;
+  text-align: center;
+  letter-spacing: 0.065em;
+  color: #fff;
+  margin-top: 2.5rem;
+}
+
+.intro button {
+  background: #F99C1C;
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 41px;
+  padding: 1rem 0.5rem;
+  width: 412px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin: 45px auto;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+
+.intro button:hover{
+  background: #ee9314;
+}
+
+.body {
+  display: flex;
+}
+
+.vigilado {
+  position: relative;
+  left: 5px;
+  width: 18px;
+  height: 120px;
+  margin-top: 1rem;
+}
+
+.body__main {
+  /* width: 897px; */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.line {
+  width: 100%;
+  margin-top: 75px;
+  height: 1px;
+  background: #C4C4C4;
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 43px;
+  width: 100%;
+}
+
+.logos img {
+  height: fit-content;
+  width: fit-content;
+  display: inline-block;
+  /* object-fit: contain;
+  image-rendering: auto; */
+}
+
+.separador {
+  /* width: 1rem; */
+  border-left: solid 1px #A6A6A6;
+  height: 2rem;
+  margin: 0 1rem;
+
+}
+
+.terminos__condiciones {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 24px;
+}
+
+.terminos__condiciones p {
+  font-family: 'Nunito', sans-serif;
+  font-size: 11px;
+  line-height: 14px;
+  font-weight: 400;
+  color: #4A4B4A;
+}
+
+.informacion {
+  width: 100%;
+  display: flex;
+  margin: 24px 0;
+}
+
+.informacion p {
+  font-family: 'Nunito', sans-serif;
+  font-size: 11px;
+  line-height: 14px;
+  font-weight: 400;
+  color: #4A4B4A;
+}
+
+.informacion img {
+  display: inline-block;
+}
+
+/* Iphone */
+@media (max-width: 768px) {
+  .cambiando-contigo {
+    width: 90%;
+    padding: 0.7rem;
+  }
+
+  .intro {
+    margin-top: 60%;
+    width: 95%;
+  }
+
+  .intro h2 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .intro h1 {
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 1.5rem;
+  }
+
+  .intro button {
+    font-size: 18px;
+    line-height: 21px;
+    padding: 1rem 0.5rem;
+    width: 220px;
+    margin: 45px auto;
+  }
+
+  .vigilado {
+    top: 0.8rem;
+    width: 8px;
+    height: 56px;
+  }
+
+  .body__main {
+    width: 93%;
+    margin-left: 3%;
+  }
+
+  .line {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .logos img {
+    width: 20%;
+    height: auto;
+  }
+
+  .terminos__condiciones {
+    margin-top: 22px;
+  }
+
+  .terminos__condiciones p {
+    font-size: 8px;
+  }
+
+  .informacion p {
+    font-size: 8px;
+  }
+}
+
+
+/* Android */
+@media (max-width: 375px) {
+  .content {
+    height: 100vh;
+  }
+
+  .header {
+    height: 100vh;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+  }
+
+  .cambiando-contigo {
+    width: 95%;
+    padding: 0.5rem;
+  }
+
+  .intro {
+    margin-top: 45%;
+    width: 95%;
+  }
+
+  .intro h2 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .intro h1 {
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 1.5rem;
+  }
+
+  .intro button {
+    font-size: 16px;
+    line-height: 21px;
+    padding: 1rem 0.3rem;
+    width: 185px;
+    margin: 45px auto;
+  }
+
+  .vigilado {
+    display: none;
+  }
+
+  .body__main {
+    display: none;
+  }
+
+
 }
