@@ -172,7 +172,7 @@ nav {
   width: 100%;
 }
 
-.logos img {
+.logos a > img {
   height: fit-content;
   width: fit-content;
   display: inline-block;
@@ -273,10 +273,10 @@ nav {
     margin-top: 2rem;
   }
 
-  .logos img {
+  /* .logos a > img {
     width: 20%;
     height: auto;
-  }
+  } */
 
   .terminos__condiciones {
     margin-top: 22px;
